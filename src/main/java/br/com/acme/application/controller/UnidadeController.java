@@ -41,7 +41,7 @@ public class UnidadeController {
 		return responseService.create(unidadeResponseTO);
 	}
 	
-	@GetMapping()
+	@GetMapping
 	public ResponseEntity<ResponseTO<Page<UnidadeResponseTO>>> buscar(Pageable page) {
 		Page<Unidade> unidades = unidadeService.listarTodos(page);
 		Page<UnidadeResponseTO> unidadeResponseTO = converterService.converter(unidades, UnidadeResponseTO.class);

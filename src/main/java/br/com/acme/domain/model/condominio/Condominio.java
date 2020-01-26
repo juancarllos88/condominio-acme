@@ -7,6 +7,7 @@ import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -37,11 +38,11 @@ public class Condominio implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-
+	@Column(name="nome")
 	private String nome;
-
+	@Column(name="email")
 	private String email;
-
+	@Column(name="telefone")
 	private String telefone;
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "condominio", fetch = FetchType.LAZY)

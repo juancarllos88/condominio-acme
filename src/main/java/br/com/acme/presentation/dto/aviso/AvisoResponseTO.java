@@ -2,12 +2,14 @@ package br.com.acme.presentation.dto.aviso;
 
 import java.io.Serializable;
 
+import org.springframework.hateoas.RepresentationModel;
+
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class AvisoResponseTO implements Serializable {
+public class AvisoResponseTO extends RepresentationModel<AvisoResponseTO> implements Serializable {
 
 	/**
 	 * 
